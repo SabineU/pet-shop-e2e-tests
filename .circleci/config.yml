@@ -7,6 +7,9 @@ jobs:
     docker:
       - image: cimg/node:15.1-browsers
     working_directory: ~/repo
+    environment:
+      adminEmail: admin@buckhill.co.uk
+      adminPassword: admin
     steps:
       - checkout
       - run:
