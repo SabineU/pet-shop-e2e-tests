@@ -13,6 +13,10 @@ jobs:
     steps:
       - checkout
       - run:
+          name: "Setup custom environment variables"
+          command: echo 'export MY_ENV_VAR="admin@buckhill.co.uk"' >> "$BASH_ENV"
+          command: echo 'export MY_ENV_VAR="admin"' >> "$BASH_ENV"
+      - run:
           name: Install npm dependencies
           command: |
             npm install
