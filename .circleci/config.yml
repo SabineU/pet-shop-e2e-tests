@@ -7,15 +7,13 @@ jobs:
     docker:
       - image: cimg/node:15.1-browsers
     working_directory: ~/repo
-    environment:
-      adminEmail: admin@buckhill.co.uk
-      adminPassword: admin
     steps:
       - checkout
       - run:
-          name: "Setup custom environment variables"
-          command: echo 'export MY_ENV_VAR="admin@buckhill.co.uk"' >> "$BASH_ENV"
-          command: echo 'export MY_ENV_VAR="admin"' >> "$BASH_ENV"
+          name: Environment variables
+          environment:
+            adminEmail: adminEmail
+            adminPassword: 
       - run:
           name: Install npm dependencies
           command: |
