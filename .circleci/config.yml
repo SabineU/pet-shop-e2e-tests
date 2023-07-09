@@ -10,6 +10,13 @@ jobs:
     steps:
       - checkout
       - run:
+          name: Env variaables
+          environment:
+            adminEmail: adminEmail
+            adminPassword: adminPassword
+          command: |
+            npm install
+      - run:
           name: Install npm dependencies
           command: |
             npm install
