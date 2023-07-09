@@ -13,7 +13,7 @@ jobs:
           name: Environment variables
           environment:
             adminEmail: adminEmail
-            adminPassword: 
+            adminPassword: adminPassword
       - run:
           name: Install npm dependencies
           command: |
