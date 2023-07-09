@@ -10,11 +10,11 @@ jobs:
     steps:
       - checkout
       - run:
-          name: Env Variables
-            environment:
-              adminEmail: adminEmail
-              adminPassword: adminPassword
-            command: npm ci
+        name: Env Variables
+        environment:
+            adminEmail: adminEmail
+            adminPassword: adminPassword
+        command: npm ci
       - run:
           name: Install npm dependencies
           command: |
